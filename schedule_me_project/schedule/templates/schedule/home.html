@@ -6,6 +6,6 @@
     {% if user.is_authenticated %}
         <p class='fd-5 text-center'>Go to <a href="{% url 'scheduler' %}">Scheduler</a> to see schedule.</p>       
     {% else %}
-        <p class='fs-5 text-center'>Please sign in to see schedule.</p>
+        <p class='fs-5 text-center'>Please <a href="{% url 'login' %}">Sign In</a> to see schedule.</p>
     {% endif %}
 {% endblock content %}

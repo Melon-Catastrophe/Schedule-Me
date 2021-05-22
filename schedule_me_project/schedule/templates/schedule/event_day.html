@@ -1,0 +1,18 @@
+{% extends "schedule/base.html" %}
+
+{% block content %}
+
+{% if events %}
+    <ul>
+    <h2>{{ day }}</h2>
+    {% for event in events %}
+        <table class="table", style="width: 50%">
+            <tr>    <th>{{ event.get_time_display }}</th>    <th>{{ event.title }}</th>   </tr>
+        </table>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No event list</p>
+{% endif %}
+
+{% endblock content %}

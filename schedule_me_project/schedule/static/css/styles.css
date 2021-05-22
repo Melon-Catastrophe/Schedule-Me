@@ -1,5 +1,5 @@
 /* Be sure to understand the CSS and write your own. */
-  .content-section {
+.content-section {
     background: #ffffff;
     padding: 10px 20px;
     border: 1px solid #dddddd;
@@ -42,4 +42,13 @@
     width: 25px;
     height: 25px;
     vertical-align: middle;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  #navigation {
+    margin-left: 100px;
+    text-align: center;
   }

@@ -1,19 +1,11 @@
 {% extends "schedule/base.html" %}
 
 {% block content %}
-    <center><h2>Welcome to Schedule Me!</h2>
-    <h4>Login Required</h4></center>
-
-    {% for post in posts %}
-        <article class='media content-section'>
-            <div class="media-body">
-                <div class="article-metadata">
-                    <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>  <!-- Django Date Filters available here: https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#date -->
-                    <a class="me2" href="#">{{ post.author }}</a>
-                </div>
-                <h2 class="article-title">{{ post.title }}</h2>
-                <p class="article-content">{{ post.content }}</p>
-            </div>
-        </article>
-    {% endfor %}
+<p></p>
+    <center><h2>Welcome to Schedule Me!</h2></center>
+    {% if user.is_authenticated %}
+        <p class='fd-5 text-center'>Go to <a href="{% url 'scheduler' %}">Scheduler</a> to see schedule.</p>       
+    {% else %}
+        <p class='fs-5 text-center'>Please sign in to see schedule.</p>
+    {% endif %}
 {% endblock content %}

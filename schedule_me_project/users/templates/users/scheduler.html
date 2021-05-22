@@ -1,0 +1,81 @@
+{% extends "schedule/base.html" %}
+
+{% block content %}
+    <h1 class='text-center'>Schedule Me</h1><p class='text-center'>{{ user.username }}'s Schedule</p>
+
+    {% if events %}
+        {% if sundays %}
+        <h2 class='text'><a class='text-decoration-none text-dark' href="event_day/Sunday">Sunday</a></h2>
+        <table class="table", style="width: 50%">
+        {% for item in sundays %}
+            <tr>    <th>{{ item.get_time_display }}</th>    <th>{{ item.title }}</th>   </tr>
+        {% endfor %}
+        </table>
+        {% endif %}
+        
+        {% if mondays %}
+        <h2 class='text'><a class='text-decoration-none text-dark' href="event_day/Monday">Monday</a></h2>
+        <table class="table", style="width: 50%">
+        {% for item in mondays %}
+            <tr>    <th>{{ item.get_time_display }}</th>    <th>{{ item.title }}</th>   </tr>
+        {% endfor %}
+        </table>
+        {% endif %}
+
+        {% if tuesdays %}
+        <h2 class='text'><a class='text-decoration-none text-dark' href="event_day/Tuesday">Tuesday</a></h2>
+        <table class="table", style="width: 50%">
+        {% for item in tuesdays %}
+            <tr>    <th>{{ item.get_time_display }}</th>    <th>{{ item.title }}</th>   </tr>
+        {% endfor %}
+        </table>
+        {% endif %}
+
+        {% if wednesdays %}
+        <h2 class='text'><a class='text-decoration-none text-dark' href="event_day/Wednesday">Wednesday</a></h2>
+        <table class="table", style="width: 50%">
+        {% for item in wednesdays %}
+            <tr>    <th>{{ item.get_time_display }}</th>    <th>{{ item.title }}</th>   </tr>
+        {% endfor %}
+        </table>
+        {% endif %}
+
+        {% if thursdays %}
+        <h2 class='text'><a class='text-decoration-none text-dark' href="event_day/Thursday">Thursday</a></h2>
+        <table class="table", style="width: 50%">
+        {% for item in thursdays %}
+            <tr>    <th>{{ item.get_time_display }}</th>    <th>{{ item.title }}</th>   </tr>
+        {% endfor %}
+        </table>
+        {% endif %}
+
+        {% if fridays %}
+        <h2 class='text'><a class='text-decoration-none text-dark' href="event_day/Friday">Friday</a></h2>
+        <table class="table", style="width: 50%">
+        {% for item in fridays %}
+            <tr>    <th>{{ item.get_time_display }}</th>    <th>{{ item.title }}</th>   </tr>
+        {% endfor %}
+        </table>
+        {% endif %}
+
+        {% if saturdays %}
+        <h2 class='text'><a class='text-decoration-none text-dark' href="event_day/Saturday">Saturday</a></h2>
+        <table class="table", style="width: 50%">
+        {% for item in saturdays %}
+            <tr>    <th>{{ item.get_time_display }}</th>    <th>{{ item.title }}</th>   </tr>
+        {% endfor %}
+        </table>
+        {% endif %}
+
+        
+        <p></p>
+
+        <!-- {% for event in events %}
+            <li><a href="{% url 'event_day' event.day %}">Title: {{ event.title }}, Day: {{ event.day }}, Time: {{ event.time }}, Creator: {{ event.creator }}</a></li>    
+        {% endfor %} -->
+    {% else %}
+        <p>No event list</p>
+    {% endif %}
+
+    <footnote class='text-muted'><p>Hint: click on the weekdays to view just those days!</p></footnote>
+{% endblock content %}

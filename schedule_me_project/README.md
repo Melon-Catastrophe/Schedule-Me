@@ -20,7 +20,6 @@ The development environment that I used was VSCodium. I used Python and Django t
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [Django Official Tutorial](https://docs.djangoproject.com/en/3.2/intro/)
 * [Corey Schafer's Django Tutorial](https://youtu.be/UmljXZIypDc)
 * [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)

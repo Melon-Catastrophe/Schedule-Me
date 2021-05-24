@@ -6,7 +6,7 @@
         <form method="POST">
             {% csrf_token %}    <!-- This is to add required security to our forms. -->
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Event</legend>
+                <legend class="border-bottom mb-4">Create Event</legend>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">

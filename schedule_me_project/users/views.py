@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.http import HttpResponse
 from django.views.generic import CreateView, UpdateView, DeleteView
 
 from .forms import UserRegisterForm
@@ -47,9 +46,20 @@ def scheduler(request):
     }
     return render(request, 'users/scheduler.html', context)
 
+@login_required
+def event_day(request, day):
+    event_list = Event.objects.all().filter(day__contains=day, creator=request.user.id).order_by('time')
+    context = {
+        'events': event_list,
+        'day': day,
+    }
+    return render(request, 'schedule/event_day.html', context)
+
+
 class EventCreateView(LoginRequiredMixin, CreateView):
     model = Event
     fields = ['title', 'time', 'day']
+    template_name = 'schedule/event_create.html'
 
     def form_valid(self, form):
         form.instance.creator = self.request.user
@@ -84,11 +94,3 @@ class EventDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return False
 
     
-@login_required
-def event_day(request, day):
-    event_list = Event.objects.all().filter(day__contains=day, creator=request.user.id).order_by('time')
-    context = {
-        'events': event_list,
-        'day': day,
-    }
-    return render(request, 'schedule/event_day.html', context)

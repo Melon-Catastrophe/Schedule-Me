@@ -1,8 +1,9 @@
 # Overview
 
-The purpose of writing this code was to learn how to create a web app using Django. Web apps are powerful, and it is about time that I learned how to make one.
+The purpose of writing this code was to learn how to create a web app using Django. I am not typically a fan of developing web applications, but I decided that it was about high time that I faced my fears and learned how to make one. Schedules are very handy, so I wanted to make a website called Schedule Me!
 
-[Schedule Me Demo Video](https://youtu.be/LRVAKd8bIfA)
+[Schedule Me Demo Video Part 1](https://youtu.be/LRVAKd8bIfA)
+[Schedule Me Demo Video Part 2](https://youtu.be/IJkwFUKLt5s)
 
 # Web Pages
 
@@ -31,4 +32,4 @@ The development environment that I used was VSCodium. I used Python and Django t
 # Future Work
 
 * I would like to make the visual style of Schedule Me a bit more consistent and make it look just a bit nicer.
-* I would love to make it so that the field in the Event model took a time object as an input instead of a set of predetermined choices.
+* I would love to make it so that the time field in the Event model took a time object as an input instead of a set of predetermined choices.

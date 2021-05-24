@@ -6,16 +6,12 @@
         <form method="POST">
             {% csrf_token %}    <!-- This is to add required security to our forms. -->
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Login</legend>
+                <legend class="border-bottom mb-4">Update Event</legend>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Login</button>
+                <button class="btn btn-outline-info" type="submit">Update</button>
             </div>
         </form>
-
-        <div class="border-top pt-3">
-            <small class="text-muted">Need an Account? <a class="ms-2 btn btn-outline-info" href="{% url 'register' %}">Sign Up</a></small>
-        </div>
     </div>
 {% endblock content %}

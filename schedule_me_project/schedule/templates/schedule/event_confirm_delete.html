@@ -1,0 +1,17 @@
+{% extends "schedule/base.html" %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}    <!-- This is to add required security to our forms. -->
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Delete Post</legend>
+                <h2>Are you sure you would like to delete the event on {{ object.day }} titled "{{ object.title }}"?</h2>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Delete</button>
+                <a class="btn btn-outline-secondary " href="{% url 'scheduler' %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

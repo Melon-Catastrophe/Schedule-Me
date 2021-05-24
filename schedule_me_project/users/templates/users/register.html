@@ -10,12 +10,12 @@
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outlin-info" type="submit">Sign Up</button>
+                <button class="btn btn-outline-info" type="submit">Sign Up</button>
             </div>
         </form>
 
         <div class="border-top pt-3">
-            <small class="text-muted">Already Have an Account? <a class="ms-2" href="{% url 'login' %}">Login</a></small>
+            <small class="text-muted">Already Have an Account? <a class="ms-2 btn btn-outline-info" href="{% url 'login' %}">Login</a></small>
         </div>
     </div>
 {% endblock content %}

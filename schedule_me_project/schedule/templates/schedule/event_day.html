@@ -3,14 +3,13 @@
 {% block content %}
 
 {% if events %}
-    <ul>
+    <h1 class='text-center'>{{ day }}'s Events</h1><p class='text-center'>{{ user.username }}'s Schedule</p>
     <h2>{{ day }}</h2>
+    <table class="table", style="width: 50%">
     {% for event in events %}
-        <table class="table", style="width: 50%">
-            <tr>    <th>{{ event.get_time_display }}</th>    <th>{{ event.title }}</th>   </tr>
-        </table>
+            <tr><th id="time">{{ event.get_time_display }}</th><th>{{ event.title }}</th></tr>
     {% endfor %}
-    </ul>
+    </table>
 {% else %}
     <p>No event list</p>
 {% endif %}

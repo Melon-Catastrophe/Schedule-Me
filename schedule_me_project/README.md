@@ -12,7 +12,10 @@ The purpose of writing this code was to learn how to create a web app using Djan
 - The Login page displays the necessary form to login.
 - The Register page displays the necessary register to login.
 - The Profile page will display the user's Username and Email. 
-- The Scheduler page dynamically displays the user's schedule that they made. If they click on one of the day headers, then they will be led to a page that contains their schedule for only that day. 
+- The Scheduler page dynamically displays the user's schedule that they made. If they click on one of the day headers, then they will be led to a page that contains their schedule for only that day.
+- The Create page allows a user to create an event for their schedule.
+- The Update page allows a user to update their event.
+- The Delete page allows a user to delete their event. 
 
 # Development Environment and Dependencies
 
@@ -27,6 +30,5 @@ The development environment that I used was VSCodium. I used Python and Django t
 
 # Future Work
 
-* I need to add a way for the user to create their schedule without going through the admin page. I would have added this, but I simply did not have enough time. 
 * I would like to make the visual style of Schedule Me a bit more consistent and make it look just a bit nicer.
-* I would love to make it so that the field in the Event model took time as an input instead of a set of predetermined choices.
+* I would love to make it so that the field in the Event model took a time object as an input instead of a set of predetermined choices.
